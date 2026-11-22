@@ -1,0 +1,31 @@
+《閃身步？閃身不！》
+Designed by K
+
+這份 ZIP 包含：
+- 手機直式遊戲網站（首頁動畫、輸入暱稱、足球閃避與踢球、炸彈、結算）
+- 真正共用的「今日／本週／歷史」排行榜服務
+- 排行榜的 Netlify Functions 與 Blobs 儲存設定
+
+【先試玩】
+直接打開 public 資料夾中的 index.html，或下載獨立 HTML 預覽版。
+沒有上線後端時，遊戲本身可以玩，雲端排行榜會如實顯示「尚未連線」。
+
+【正式公開，啟用共用排行榜】
+1. 將整份網站專案資料夾（不是只有 public）上傳到你自己的 GitHub 儲存庫。
+2. 到 Netlify「Add new project」→「Import an existing project」，選擇 GitHub 的這份儲存庫。
+3. Netlify 會讀取 netlify.toml：發佈目錄 public、Functions 路徑 netlify/functions。
+4. 部署完成後，在公開網址打開遊戲，測試一局並查看排行榜。
+5. 分享 Netlify 正式網址到 Threads。
+
+注意：直接把 public/index.html 丟到 Netlify Drop，只能啟用靜態遊戲，無法啟用全網共享排行榜。
+若希望只靠拖曳上傳且不要接 GitHub，必須另行部署 Functions（例如 Netlify CLI）。
+
+【排行榜】
+- 今日榜、本週榜、歷史總榜，以台灣時間為準
+- 相同瀏覽器的同一位玩家，以各時段最高分計算排名
+- 排名依照分數、最高連擊、提交時間排序
+- 無需帳號；名字公開顯示，請勿填入私人資訊
+- 這是輕量公開遊戲，已加入最基本的戰績檢查，但不能完全阻止惡意刷分；若爆紅建議升級驗證及資料庫
+
+【角色素材】
+角色是依照提供的影片畫面重新繪製的插畫，不直接嵌入原始影片截圖。
